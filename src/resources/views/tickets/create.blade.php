@@ -59,11 +59,6 @@
                        class="w-full border rounded p-2" required>
             </div>
 
-            <div class="mb-4">
-                <label for="document" class="block font-medium">Documento</label>
-                <input type="file" name="document" id="document" class="w-full border rounded p-2" required>
-            </div>
-
             <button class="bg-blue-600 text-white px-4 py-2 rounded shadow">
                 Crear Ticket
             </button>

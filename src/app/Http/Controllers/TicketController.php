@@ -41,17 +41,6 @@ class TicketController extends Controller
             'user_id' => Auth::id(),
         ]);
 
-        if ($request->hasFile('document')) {
-            $path = $request->file('document')->store('tickets/' . $ticket->id . '/documents', 'public');
-
-            Document::create([
-                'ticket_id' => $ticket->id,
-                'path' => $path,
-                'description' => 'Documento inicial',
-                'uploaded_by' => Auth::id(),
-            ]);
-        }
-
         return redirect()->route('dashboard')
             ->with('success', 'Ticket creado correctamente.');
     }
